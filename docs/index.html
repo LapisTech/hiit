@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>HIIT Timer</title>
+	<link rel="manifest" href="./manifest.json">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="icon" href="./favicon.svg" type="image/svg+xml">
@@ -180,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	timer.setCount(document.getElementById('set'));
 	timer.updateAfterChange();
 });
+navigator.serviceWorker.register('./sw.js');
 	</script>
 	<style>
 :root { --back: #fff; --front: #000; --low: #5fbcd3; --high: #ff8080; --high-back: #808080; --low-back: #cfcfcf; --button-back: var(--high-back); --button-front: var(--back); }
