@@ -97,12 +97,16 @@ class Timer {
 			if (this.high.classList.contains('hide') || this.max <= count) {
 				this.high.classList.add('hide');
 				end();
+				wakeLock.then(() => {
+					return wakeLock.release();
+				});
 				return;
 			}
 			requestAnimationFrame(update);
 		};
 
 		requestAnimationFrame(update);
+		const wakeLock = navigator.wakeLock.request('screen');
 	}
 
 	stop() {
