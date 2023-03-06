@@ -184,7 +184,8 @@ document.addEventListener('DOMContentLoaded', () => {
 navigator.serviceWorker.register('./sw.js');
 	</script>
 	<style>
-:root { --back: #fff; --front: #000; --low: #5fbcd3; --high: #ff8080; --high-back: #808080; --low-back: #cfcfcf; --button-back: var(--high-back); --button-front: var(--back); }
+:root { --back: #fff; --front: #19191a; --low: #5fbcd3; --high: #ff8080; --high-back: #808080; --low-back: #cfcfcf; --button-back: var(--high-back); --button-front: var(--back); }
+@media (prefers-color-scheme: dark) {:root { --back: #19191a; --front: #fff; --low: #6baebf; --high: #b56b6b; --high-back: #4a4949; --low-back: #5e5c5c; }}
 #back { fill: none; stroke: var(--low-back); stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; }
 #high_back { fill: none; stroke: var(--high-back); stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; }
 #back_top { fill: var(--low-back); }
@@ -194,7 +195,7 @@ navigator.serviceWorker.register('./sw.js');
 .hide { --low: none; --high: none; }
 svg { width: 100%; height: auto; }
 html { height: 100%; font-size: 5vmin; }
-body { height: 100%; display: flex; overflow: hidden; margin: 0; align-items: center; justify-content: center; }
+body { height: 100%; display: flex; overflow: hidden; margin: 0; align-items: center; justify-content: center; background: var(--back); color: var(--front) }
 body > div { width: 100vmin; height: 100vmin; position: relative; }
 button { cursor: pointer; border: none; background: var(--button-back); color: var(--button-front); position: absolute; border-radius: 50%; }
 button#start { margin: auto; top: 0; bottom: 0; left: 0; right: 0; width: 30vmin; height: 30vmin; font-size: 20vmin; line-height: 30vmin; }
@@ -208,8 +209,8 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.8);}
 dialog > div { background: var(--back); color: var(--front); padding: 1rem; border-radius: 0.5rem;}
 h1 { font-size: 1.5rem; margin: 0 0 0.5rem; text-align: center; }
 dt { font-size: 1rem; }
-input { font-size: 2rem; width: 2em; border: none; background: var(--low-back); border-radius: 0.5rem; margin-right: 0.5rem; outline: none; }
-.count { position: absolute; margin: auto; left: 0; right: 0; top: 70%; text-align: center; font-size: 3rem; }
+input { font-size: 2rem; width: 2em; border: none; background: var(--low-back); border-radius: 0.5rem; margin-right: 0.5rem; outline: none; color: var(--front); }
+.count { position: absolute; margin: auto; left: 0; right: 0; top: 66vmin; text-align: center; font-size: 10vmin; }
 	</style>
 </head>
 <body>

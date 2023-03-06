@@ -4,5 +4,5 @@
 	"start_url": "/",
 	"icons": [{"src":"./favicon.svg","sizes":"any"}],
 	"display": "standalone",
-	"theme_color": "#5fbcd3"
+	"theme_color": "#fff"
 }
